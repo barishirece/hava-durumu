@@ -1,0 +1,466 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 568
+  ClientWidth = 384
+  Fill.Color = claLavender
+  Fill.Kind = Solid
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Saatlik Hava Durumu'
+      object GridPanelLayout3: TGridPanelLayout
+        Align = Client
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 155
+        ColumnCollection = <
+          item
+            Value = 12.750000000000000000
+          end
+          item
+            Value = 72.250000000000000000
+          end
+          item
+            Value = 15.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = SpeedButton1
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        object SpeedButton1: TSpeedButton
+          Anchors = []
+          Position.X = 0.479999542236328100
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'arrowlefttoolbutton'
+          Text = 'SpeedButton1'
+          OnClick = SpeedButton1Click
+        end
+      end
+    end
+  end
+  object GridPanelLayout1: TGridPanelLayout
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 520.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ColumnCollection = <
+      item
+        Value = 9.363244190351395000
+      end
+      item
+        Value = 81.636755809648610000
+      end
+      item
+        Value = 9.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 1
+        Control = GridPanelLayout2
+        Row = 1
+      end>
+    RowCollection = <
+      item
+        Value = 4.945866418732692000
+      end
+      item
+        Value = 90.054133581267310000
+      end
+      item
+        Value = 5.000000000000000000
+      end>
+    object GridPanelLayout2: TGridPanelLayout
+      Align = Client
+      Size.Width = 313.485137939453100000
+      Size.Height = 468.281494140625000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ColumnCollection = <
+        item
+          Value = 16.423429139624990000
+        end
+        item
+          Value = 19.013837035447970000
+        end
+        item
+          Value = 25.000000000000000000
+        end
+        item
+          Value = 39.562733824927040000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = Image1
+          Row = 0
+        end
+        item
+          Column = 0
+          Control = Image2
+          Row = 2
+        end
+        item
+          Column = 0
+          Control = Image3
+          Row = 4
+        end
+        item
+          Column = 0
+          Control = Image4
+          Row = 6
+        end
+        item
+          Column = 0
+          Control = Image5
+          Row = 8
+        end
+        item
+          Column = 1
+          Control = TahminSaat1
+          Row = 0
+        end
+        item
+          Column = 2
+          Control = TahminDerece1
+          Row = 0
+        end
+        item
+          Column = 3
+          Control = TahminAciklama1
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = TahminSaat2
+          Row = 2
+        end
+        item
+          Column = 2
+          Control = TahminDerece2
+          Row = 2
+        end
+        item
+          Column = 3
+          Control = TahminAciklama2
+          Row = 2
+        end
+        item
+          Column = 1
+          Control = TahminSaat3
+          Row = 4
+        end
+        item
+          Column = 2
+          Control = TahminDerece3
+          Row = 4
+        end
+        item
+          Column = 3
+          Control = TahminAciklama3
+          Row = 4
+        end
+        item
+          Column = 2
+          Control = TahminDerece4
+          Row = 6
+        end
+        item
+          Column = 3
+          Control = TahminAciklama4
+          Row = 6
+        end
+        item
+          Column = 1
+          Control = TahminSaat4
+          Row = 6
+        end
+        item
+          Column = 1
+          Control = TahminSaat5
+          Row = 8
+        end
+        item
+          Column = 3
+          Control = TahminAciklama5
+          Row = 8
+        end
+        item
+          Column = 2
+          Control = TahminDerece5
+          Row = 8
+        end
+        item
+          Column = 0
+          Control = Image6
+          Row = 10
+        end
+        item
+          Column = 1
+          Control = TahminSaat6
+          Row = 10
+        end
+        item
+          Column = 2
+          Control = TahminDerece6
+          Row = 10
+        end
+        item
+          Column = 3
+          Control = TahminAciklama6
+          Row = 10
+        end>
+      RowCollection = <
+        item
+          Value = 14.211733291153220000
+        end
+        item
+          Value = 3.053318707442640000
+        end
+        item
+          Value = 14.249298664417920000
+        end
+        item
+          Value = 2.992044166762263000
+        end
+        item
+          Value = 14.357884228934540000
+        end
+        item
+          Value = 2.945409233776526000
+        end
+        item
+          Value = 14.498352427977500000
+        end
+        item
+          Value = 2.910000000000004000
+        end
+        item
+          Value = 14.219696347557390000
+        end
+        item
+          Value = 3.000000000000004000
+        end
+        item
+          Value = 13.562262931978000000
+        end>
+      object Image1: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 9.117136001586914000
+        Position.Y = 12.286323547363280000
+        Size.Width = 33.250736236572270000
+        Size.Height = 41.978271484375000000
+        Size.PlatformDefault = False
+      end
+      object Image2: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 9.117136001586914000
+        Position.Y = 93.167839050292970000
+        Size.Width = 33.250736236572270000
+        Size.Height = 42.089229583740230000
+        Size.PlatformDefault = False
+      end
+      object Image3: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 9.117136001586914000
+        Position.Y = 173.999725341796900000
+        Size.Width = 33.250736236572270000
+        Size.Height = 42.409973144531250000
+        Size.PlatformDefault = False
+      end
+      object Image4: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 9.117136001586914000
+        Position.Y = 255.149276733398400000
+        Size.Width = 33.250736236572270000
+        Size.Height = 42.824874877929690000
+        Size.PlatformDefault = False
+      end
+      object Image5: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 9.117136001586914000
+        Position.Y = 336.428466796875000000
+        Size.Width = 33.250736236572270000
+        Size.Height = 42.001800537109380000
+        Size.PlatformDefault = False
+      end
+      object TahminSaat1: TLabel
+        Align = Client
+        Size.Width = 59.605552673339840000
+        Size.Height = 66.550918579101560000
+        Size.PlatformDefault = False
+        TabOrder = 18
+      end
+      object TahminDerece1: TLabel
+        Align = Client
+        Size.Width = 78.371292114257810000
+        Size.Height = 66.550918579101560000
+        Size.PlatformDefault = False
+        TabOrder = 17
+      end
+      object TahminAciklama1: TLabel
+        Align = Client
+        Size.Width = 124.023284912109400000
+        Size.Height = 66.550918579101560000
+        Size.PlatformDefault = False
+        TabOrder = 16
+      end
+      object TahminSaat2: TLabel
+        Align = Client
+        Size.Width = 59.605552673339840000
+        Size.Height = 66.726821899414060000
+        Size.PlatformDefault = False
+        TabOrder = 15
+      end
+      object TahminDerece2: TLabel
+        Align = Client
+        Size.Width = 78.371292114257810000
+        Size.Height = 66.726821899414060000
+        Size.PlatformDefault = False
+        TabOrder = 14
+      end
+      object TahminAciklama2: TLabel
+        Align = Client
+        Size.Width = 124.023284912109400000
+        Size.Height = 66.726821899414060000
+        Size.PlatformDefault = False
+        TabOrder = 13
+      end
+      object TahminSaat3: TLabel
+        Align = Client
+        Size.Width = 59.605552673339840000
+        Size.Height = 67.235305786132810000
+        Size.PlatformDefault = False
+        TabOrder = 12
+      end
+      object TahminDerece3: TLabel
+        Align = Client
+        Size.Width = 78.371292114257810000
+        Size.Height = 67.235305786132810000
+        Size.PlatformDefault = False
+        TabOrder = 11
+      end
+      object TahminAciklama3: TLabel
+        Align = Client
+        Size.Width = 124.023284912109400000
+        Size.Height = 67.235305786132810000
+        Size.PlatformDefault = False
+        TabOrder = 10
+      end
+      object TahminDerece4: TLabel
+        Align = Client
+        Size.Width = 78.371292114257810000
+        Size.Height = 67.893112182617190000
+        Size.PlatformDefault = False
+        TabOrder = 9
+      end
+      object TahminAciklama4: TLabel
+        Align = Client
+        Size.Width = 124.023284912109400000
+        Size.Height = 67.893112182617190000
+        Size.PlatformDefault = False
+        TabOrder = 8
+      end
+      object TahminSaat4: TLabel
+        Align = Client
+        Size.Width = 59.605552673339840000
+        Size.Height = 67.893112182617190000
+        Size.PlatformDefault = False
+        TabOrder = 7
+      end
+      object TahminSaat5: TLabel
+        Align = Client
+        Size.Width = 59.605552673339840000
+        Size.Height = 66.588195800781250000
+        Size.PlatformDefault = False
+        TabOrder = 6
+      end
+      object TahminAciklama5: TLabel
+        Align = Client
+        Size.Width = 124.023284912109400000
+        Size.Height = 66.588195800781250000
+        Size.PlatformDefault = False
+        TabOrder = 2
+      end
+      object TahminDerece5: TLabel
+        Align = Client
+        Size.Width = 78.371292114257810000
+        Size.Height = 66.588195800781250000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object Image6: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Anchors = []
+        Position.X = 9.117136001586914000
+        Position.Y = 416.496704101562500000
+        Size.Width = 33.250736236572270000
+        Size.Height = 40.059875488281250000
+        Size.PlatformDefault = False
+      end
+      object TahminSaat6: TLabel
+        Align = Client
+        Size.Width = 59.605552673339840000
+        Size.Height = 63.509552001953130000
+        Size.PlatformDefault = False
+        TabOrder = 5
+      end
+      object TahminDerece6: TLabel
+        Align = Client
+        Size.Width = 78.371292114257810000
+        Size.Height = 63.509552001953130000
+        Size.PlatformDefault = False
+        TabOrder = 4
+      end
+      object TahminAciklama6: TLabel
+        Align = Client
+        Size.Width = 124.023284912109400000
+        Size.Height = 63.509552001953130000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+    end
+  end
+end

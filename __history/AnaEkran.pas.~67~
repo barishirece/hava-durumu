@@ -1,0 +1,350 @@
+﻿unit AnaEkran;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.ListBox, FMX.Layouts, FMX.ExtCtrls,
+  System.Net.URLClient, System.Net.HttpClient, System.Net.HttpClientComponent,
+  System.JSON, System.Sensors, System.Sensors.Components,
+  System.Permissions, StrUtils, FMX.Platform, FMX.Objects,
+  System.IOUtils, FMX.Ani;
+
+  function aciklamaCek(id: integer): string;
+  function ikonCek(id: integer): string;
+type
+  TForm1 = class(TForm)
+    GridPanelLayout6: TGridPanelLayout;
+    Switch1: TSwitch;
+    GridPanelLayout7: TGridPanelLayout;
+    GridPanelLayout8: TGridPanelLayout;
+    Image5: TImage;
+    GridPanelLayout9: TGridPanelLayout;
+    LabelDerece: TLabel;
+    LabelHissedilen: TLabel;
+    LabelAciklama: TLabel;
+    GridPanelLayout5: TGridPanelLayout;
+    GridPanelLayout10: TGridPanelLayout;
+    Image1: TImage;
+    BaslikRuzgar: TLabel;
+    LabelRuzgar: TLabel;
+    Image2: TImage;
+    BaslikBasinc: TLabel;
+    LabelBasinc: TLabel;
+    Image3: TImage;
+    BaslikNem: TLabel;
+    LabelNem: TLabel;
+    Image4: TImage;
+    BaslikSaat: TLabel;
+    LabelGuncSaat: TLabel;
+    LocationSensor1: TLocationSensor;
+    Timer1: TTimer;
+    HeaderLabel: TLabel;
+    LabelOtoKonum: TLabel;
+    ComboBox1: TComboBox;
+    Footer: TToolBar;
+    SpeedButton1: TSpeedButton;
+    GridPanelLayout11: TGridPanelLayout;
+    Button1: TButton;
+    GridPanelLayout12: TGridPanelLayout;
+    CelFah: TButton;
+    hpaBar: TButton;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure Switch1Switch(Sender: TObject);
+    procedure CelFahClick(Sender: TObject);
+    procedure hpaBarClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    URL, URL2: String;
+    CelFahr, hpaBarr: Boolean;
+    baglanti: boolean;
+    const PermissionAccessFineLocation = 'android.permission.ACCESS_FINE_LOCATION';
+
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+uses
+  System.Generics.Collections, IdHTTP,
+  HavaTahmin;
+
+procedure konumIzni;
+begin
+  PermissionsService.RequestPermissions([Form1.PermissionAccessFineLocation],
+
+  procedure(const APermissions: TClassicStringDynArray;
+            const AGrantResults: TClassicPermissionStatusDynArray)
+  begin
+    if (Length(AGrantResults) = 1) and (AGrantResults[0] = TPermissionStatus.Granted) then
+    else
+      ShowMessage('Konum izni alınamadı.');
+  end);
+end;
+
+procedure havaDurumu;
+var
+  JSONString, ruzgarHiz, konum, basinc, nem: string;
+  HavaDurumuData: TJSONObject;
+  sicaklik, hissedilen: Double;
+	id: integer;
+begin
+  if Form1.Switch1.IsChecked = True then
+  begin
+    Form1.LocationSensor1.Active := True;
+
+    var enlem := FloatToStr(Form1.LocationSensor1.Sensor.Latitude);
+    var boylam := FloatToStr(Form1.LocationSensor1.Sensor.Longitude);
+
+    if enlem <> 'NAN' then
+    begin
+      Form1.URL := 'https://api.openweathermap.org/data/2.5/weather?lat=' + enlem + '&lon=' + boylam + '&appid=370b8d79eece3607493bd1eaa738eda7';   // Anlik hava durumu
+      Form1.URL2 := 'https://api.openweathermap.org/data/2.5/forecast?lat=' + enlem + '&lon=' + boylam + '&appid=370b8d79eece3607493bd1eaa738eda7';   // Saatlik hava durumu tahmin      end      else
+    end
+    else
+    begin
+      Form1.Switch1.IsChecked := False;
+      ShowMessage('Konum bilgisi alınamadı.'); // muhtemelen gps kapali
+    end;
+  end
+  else
+  begin
+    Form1.Switch1.IsChecked := False;
+    Form1.LocationSensor1.Active := False;
+
+    Form1.URL := 'https://api.openweathermap.org/data/2.5/weather?q=' + Form1.ComboBox1.Selected.Text	+ '&appid=370b8d79eece3607493bd1eaa738eda7';
+    Form1.URL2 := 'https://api.openweathermap.org/data/2.5/forecast?q=' + Form1.ComboBox1.Selected.Text	+ '&appid=370b8d79eece3607493bd1eaa738eda7';
+  end;
+
+  JSONString := THttpClient.Create.Get(Form1.URL).ContentAsString;
+  HavaDurumuData := TJSONObject.ParseJSONValue(JSONString) as TJSONObject;
+
+  Sicaklik := HavaDurumuData.GetValue('main').GetValue<Double>('temp');
+  hissedilen := HavaDurumuData.GetValue('main').GetValue<Double>('feels_like');
+  basinc := HavaDurumuData.GetValue('main').GetValue<string>('pressure');
+  nem := HavaDurumuData.GetValue('main').GetValue<string>('humidity');
+  ruzgarHiz := HavaDurumuData.GetValue('wind').GetValue<String>('speed');
+  konum := HavaDurumuData.GetValue<string>('name');
+  id := (HavaDurumuData.GetValue('weather') as TJSONArray).Items[0].GetValue<integer>('id');
+
+  if (Form1.CelFahr = True) then  // true celcius
+  begin
+    Form1.LabelDerece.Text := FormatFloat('#.', Sicaklik - 273.15) + ' °C';
+    Form1.LabelHissedilen.Text := 'Hissedilen: ' + FormatFloat('#.#', Hissedilen - 273.15) + ' °C';
+  end
+  else
+  begin
+    Form1.LabelDerece.Text := FormatFloat('#.', Sicaklik) + ' °F';
+    Form1.LabelHissedilen.Text := 'Hissedilen: ' + FormatFloat('#.#', Hissedilen) + ' °F';
+  end;
+
+  if (Form1.hpaBarr = True) then  // true hPa
+    Form1.LabelBasinc.Text := basinc + ' hPa'
+  else
+    Form1.LabelBasinc.Text := FormatFloat('#.##', StrToFloat(basinc)/1000) + ' bar';
+
+  // Saat 06.00 - 19.59 arasi ise gunduz ikonlari, degilse gece ikonlari kullanilir
+  if (Time > StrToTime('06:00:00')) and (Time < StrToTime('20:00:00')) then
+    Form1.Image5.Bitmap.LoadFromFile(TPath.GetDocumentsPath	+ PathDelim + 'owmikon/' + ikonCek(id) + 'd.png')
+  else
+    Form1.Image5.Bitmap.LoadFromFile(TPath.GetDocumentsPath	+ PathDelim + 'owmikon/' + ikonCek(id) + 'n.png');
+
+  Form1.LabelAciklama.Text := aciklamaCek(id);
+  Form1.LabelRuzgar.Text := ruzgarHiz + ' km/saat';
+  Form1.LabelNem.Text := '%' + nem;
+  Form1.LabelGuncSaat.Text := LeftStr(TimeToStr(Time), 5);
+
+  // Header Label'a API'den gelen veya ComboBox'ta secilen konum yazdirilir
+  if Form1.Switch1.IsChecked then
+    Form1.HeaderLabel.Text := 'Hava Durumu - Konum: ' + konum
+  else
+    Form1.HeaderLabel.Text := 'Hava Durumu - Konum: ' + Form1.ComboBox1.Selected.Text;
+end;
+
+
+// API'den gelen id'ye gore kullanilacak ikonun adi dondurulur
+function ikonCek(id: integer):string;
+begin
+  case id of
+    200, 201, 202, 210, 211, 212, 221, 230, 231, 232: result := '11';
+    300, 301, 302, 310, 311,312, 313, 314, 321, 520, 521, 522, 531: result := '09';
+    500, 501, 502, 503, 504: result := '10';
+    600, 601, 602, 611, 612, 613, 615, 616, 620, 621, 622, 513: result := '13';
+    701, 711, 721, 731, 741, 751, 761, 762, 771, 781: result := '50';
+    800: result:= '01';
+    801: result:= '02';
+    802: result:= '03';
+    803, 804: result:= '04';
+  end;
+end;
+
+// API'den gelen id'ye gore hava durumu aciklamasi dondurulur
+function aciklamaCek(id:integer): string;
+begin
+  case id of
+    200: result := 'Hafif Yağmurlu Fırtına';
+    201, 202: result := 'Yağmurlu Fırtına';
+    210: result := 'Hafif Fırtına';
+    211: result := 'Fırtına';
+    212: result := 'Şiddetli Fırtına';
+    221: result := 'Düzensiz Fırtına';
+    230, 232: result := 'Çiseleme ile Gök Gürültülü Sağanak Yağış';
+    231: result := 'Sağanak Yağmurlu';
+    300, 301, 302, 310, 311: result := 'Çiseleme';
+    312: result := 'Yoğun Çiseleme';
+    313: result := 'Yağmur ve Çiseleme';
+    314, 321: result := 'Şiddetli Yağmur ve Çiseleme';
+    500, 501: result := 'Hafif Yağmur';
+    502, 503, 504: result := 'Şiddetli Ya�mur';
+    511: result := 'Dondurucu Yağmur';
+    520, 521, 522, 531: result := 'Yağmur';
+    600: result := 'Hafif Kar';
+    601: result := 'Kar';
+    602, 622: result := 'Yoğun Kar';
+    611: result := 'Sulu Kar';
+    612, 613, 616, 620, 621: result := 'Karla Karışık Yağmur';
+    701, 741: result:= 'Sisli';
+    711: result:= 'Dumanlı';
+    721: result := 'Puslu';
+    731: result := 'Toz/Kum Girdabı';
+    751: result := 'Kumlu';
+    761: result := 'Tozlu';
+    762: result := 'Volkanik Küllü';
+    771: result := 'Fırtınalı';
+    781: result := 'Kasırga';
+    800: result := 'Açık Hava';
+    801: result := 'Az Bulutlu';
+    802: result := 'Dağınık Bulutlu';
+    803: result := 'Parçalı Bulutlu';
+    804: result := 'Kapalı Bulutlu';
+  else
+    result := 'Hatalı ID';
+  end;
+end;
+
+// hPa-bar butonu
+procedure TForm1.hpaBarClick(Sender: TObject);
+begin
+  if Form1.hpaBar.Text = 'hPa'	 then
+  begin
+    hpaBar.Text := 'bar';
+    Form1.hpaBarr := False;
+  end
+  else
+  begin
+    hpaBar.Text := 'hPa';
+    Form1.hpaBarr := True;
+  end;
+  havaDurumu;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  ShowMessage('Barış Hırece - 21030207001' + #13#10 +
+              'Yönetim Bilişim Sistemleri Bölümü' + #13#10 +
+              '2022-23 Mobil Programlama Final Ödevi');
+end;
+
+// Celcius-Fahrenheit butonu
+procedure TForm1.CelFahClick(Sender: TObject);
+begin
+  if CelFah.Text = '°C'	 then
+  begin
+    CelFah.Text := '°F';
+    CelFahr := False;
+  end
+  else
+  begin
+    CelFah.Text := '°C';
+    CelFahr := True;
+  end;
+  havaDurumu;
+end;
+
+procedure TForm1.ComboBox1Change(Sender: TObject);
+begin
+  havaDurumu;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  konumIzni;
+
+  {$IFDEF ANDROID}
+    Form1.hpaBar.Text := 'hPa';
+    hpaBarr := True;
+    CelFahr := True;
+    Timer1.Enabled := False;
+
+    Image1.Bitmap.LoadFromFile(TPath.GetDocumentsPath	+ PathDelim + 'ikonlar/ruzgar.png');
+    Image2.Bitmap.LoadFromFile(TPath.GetDocumentsPath	+ PathDelim + 'ikonlar/basinc.png');
+    Image3.Bitmap.LoadFromFile(TPath.GetDocumentsPath	+ PathDelim + 'ikonlar/nem.png');
+    Image4.Bitmap.LoadFromFile(TPath.GetDocumentsPath	+ PathDelim + 'ikonlar/saat.png');
+
+    havaDurumu;
+  {$ELSE}
+    Application.Terminate;
+  {$ENDIF}
+end;
+
+procedure TForm1.SpeedButton1Click(Sender: TObject);
+begin
+  Form2.Show;
+  Form1.Timer1.Enabled := False;
+end;
+
+// Konum izni
+procedure TForm1.Switch1Switch(Sender: TObject);
+begin
+  Timer1.Enabled := True;
+  Timer1.Interval	:= 1000;
+
+  if Switch1.IsChecked then
+  begin
+    ComboBox1.Visible := False;
+    LabelOtoKonum.Text := 'Oto. Konum: Açık';
+
+    {$IFDEF ANDROID}
+      PermissionsService.RequestPermissions([PermissionAccessFineLocation],
+      procedure(const APermissions: TClassicStringDynArray; const AGrantResults: TClassicPermissionStatusDynArray)
+      begin
+        if (Length(AGrantResults) = 1) and (AGrantResults[0] = TPermissionStatus.Granted) then
+          LocationSensor1.Active := True
+        else
+        begin
+          ShowMessage('Konum izni alınamadı.');
+          Switch1.IsChecked := False;
+        end;
+      end);
+    {$ELSE}
+      LocationSensor1.Active := True;
+    {$ENDIF}
+  end
+  else
+  begin
+    ComboBox1.Visible := True;
+    LabelOtoKonum.Text := 'Oto. Konum: Kapalı';
+    havaDurumu;
+  end;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+  {$IFDEF ANDROID}
+    Timer1.Interval := 60000;
+    havaDurumu;
+  {$ENDIF}
+end;
+
+end.
+

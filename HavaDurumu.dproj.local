@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.034,=D:\Masaüstü\Hava Durumu\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.463,=D:\Masaüstü\Hava Durumu\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.619,D:\Masaüstü\Hava Durumu\Unit2.pas=D:\Masaüstü\Hava Durumu\HavaTahmin.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.641,D:\Masaüstü\Hava Durumu\Loading.fmx=D:\Masaüstü\Hava Durumu\Unit3.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.763,C:\Users\bhire\OneDrive\Belgeler\Embarcadero\Studio\Projects\Unit1.fmx=D:\Masaüstü\Hava Durumu\AnaEkran.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.107,C:\Users\bhire\OneDrive\Belgeler\Embarcadero\Studio\Projects\Project1.dproj=D:\Masaüstü\Hava Durumu\HavaDurumu.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.641,D:\Masaüstü\Hava Durumu\Loading.pas=D:\Masaüstü\Hava Durumu\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.836,D:\Masaüstü\Hava Durumu\Loading.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.619,D:\Masaüstü\Hava Durumu\Unit2.fmx=D:\Masaüstü\Hava Durumu\HavaTahmin.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.763,C:\Users\bhire\OneDrive\Belgeler\Embarcadero\Studio\Projects\Unit1.pas=D:\Masaüstü\Hava Durumu\AnaEkran.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.544,=C:\Users\bhire\OneDrive\Belgeler\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="127.0.0.1:58526" Android="127.0.0.1:58526"/>
+	</ActiveMobileDevice>
+</BorlandProject>

@@ -1,0 +1,121 @@
+inherited Form2_LgXhdpiPh: TForm2_LgXhdpiPh
+  ClientHeight = 696
+  ClientWidth = 448
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 448.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 448.000000000000000000
+      inherited GridPanelLayout3: TGridPanelLayout
+        Size.Width = 448.000000000000000000
+        inherited SpeedButton1: TSpeedButton
+          Position.X = 4.559999465942383000
+        end
+      end
+    end
+  end
+  inherited GridPanelLayout1: TGridPanelLayout
+    Size.Width = 448.000000000000000000
+    Size.Height = 648.000000000000000000
+    inherited GridPanelLayout2: TGridPanelLayout
+      Size.Width = 365.732666015625000000
+      Size.Height = 583.550781250000000000
+      inherited Image1: TImage
+        Position.X = 13.407554626464840000
+        Position.Y = 20.477203369140630000
+      end
+      inherited Image2: TImage
+        Position.X = 13.407554626464840000
+        Position.Y = 121.281677246093800000
+      end
+      inherited Image3: TImage
+        Position.X = 13.407554626464840000
+        Position.Y = 222.050125122070300000
+      end
+      inherited Image4: TImage
+        Position.X = 13.407554626464840000
+        Position.Y = 323.226043701171900000
+      end
+      inherited Image5: TImage
+        Position.X = 13.407554626464840000
+        Position.Y = 424.411102294921900000
+      end
+      inherited TahminSaat1: TLabel
+        Size.Width = 69.539810180664060000
+        Size.Height = 82.932678222656250000
+      end
+      inherited TahminDerece1: TLabel
+        Size.Width = 91.433166503906250000
+        Size.Height = 82.932678222656250000
+      end
+      inherited TahminAciklama1: TLabel
+        Size.Width = 144.693847656250000000
+        Size.Height = 82.932678222656250000
+      end
+      inherited TahminSaat2: TLabel
+        Size.Width = 69.539810180664060000
+        Size.Height = 83.151893615722660000
+      end
+      inherited TahminDerece2: TLabel
+        Size.Width = 91.433166503906250000
+        Size.Height = 83.151893615722660000
+      end
+      inherited TahminAciklama2: TLabel
+        Size.Width = 144.693847656250000000
+        Size.Height = 83.151893615722660000
+      end
+      inherited TahminSaat3: TLabel
+        Size.Width = 69.539810180664060000
+        Size.Height = 83.785552978515630000
+      end
+      inherited TahminDerece3: TLabel
+        Size.Width = 91.433166503906250000
+        Size.Height = 83.785552978515630000
+      end
+      inherited TahminAciklama3: TLabel
+        Size.Width = 144.693847656250000000
+        Size.Height = 83.785552978515630000
+      end
+      inherited TahminDerece4: TLabel
+        Size.Width = 91.433166503906250000
+        Size.Height = 84.605255126953130000
+      end
+      inherited TahminAciklama4: TLabel
+        Size.Width = 144.693847656250000000
+        Size.Height = 84.605255126953130000
+      end
+      inherited TahminSaat4: TLabel
+        Size.Width = 69.539810180664060000
+        Size.Height = 84.605255126953130000
+      end
+      inherited TahminSaat5: TLabel
+        Size.Width = 69.539810180664060000
+        Size.Height = 82.979156494140630000
+      end
+      inherited TahminAciklama5: TLabel
+        Size.Width = 144.693847656250000000
+        Size.Height = 82.979156494140630000
+      end
+      inherited TahminDerece5: TLabel
+        Size.Width = 91.433166503906250000
+        Size.Height = 82.979156494140630000
+      end
+      inherited Image6: TImage
+        Position.X = 13.407554626464840000
+        Position.Y = 523.949523925781300000
+      end
+      inherited TahminSaat6: TLabel
+        Size.Width = 69.539810180664060000
+        Size.Height = 79.142730712890630000
+      end
+      inherited TahminDerece6: TLabel
+        Size.Width = 91.433166503906250000
+        Size.Height = 79.142730712890630000
+      end
+      inherited TahminAciklama6: TLabel
+        Size.Width = 144.693847656250000000
+        Size.Height = 79.142730712890630000
+      end
+    end
+  end
+end

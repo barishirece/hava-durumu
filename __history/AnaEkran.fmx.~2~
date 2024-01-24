@@ -1,0 +1,857 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  ActiveControl = Switch1
+  Caption = 'Form1'
+  ClientHeight = 568
+  ClientWidth = 384
+  Fill.Color = claAliceblue
+  Fill.Kind = Solid
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Hava Durumu'
+      object GridPanelLayout11: TGridPanelLayout
+        Align = Client
+        Size.Width = 384.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 156
+        ColumnCollection = <
+          item
+            Value = 12.300000000000000000
+          end
+          item
+            Value = 69.700000000000000000
+          end
+          item
+            Value = 18.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = Button1
+            Row = 0
+          end
+          item
+            Column = 2
+            Control = GridPanelLayout12
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        object Button1: TButton
+          Anchors = []
+          Position.Y = 2.000000000000000000
+          Size.Width = 47.231998443603520000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'i'
+          OnClick = Button1Click
+        end
+        object GridPanelLayout12: TGridPanelLayout
+          Align = Client
+          Size.Width = 69.119995117187500000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          ColumnCollection = <
+            item
+              Value = 100.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = CelFah
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = hpaBar
+              Row = 1
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          object CelFah: TButton
+            Align = Client
+            Size.Width = 69.119995117187500000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #176'C'
+            OnClick = CelFahClick
+          end
+          object hpaBar: TButton
+            Align = Client
+            Size.Width = 69.119995117187500000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = 'hPa'
+            OnClick = hpaBarClick
+          end
+        end
+      end
+    end
+  end
+  object Z: TGridPanelLayout
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 472.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ColumnCollection = <
+      item
+        Value = 4.750000000000000000
+      end
+      item
+        Value = 90.250000000000000000
+      end
+      item
+        Value = 5.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 1
+        Control = GridPanelLayout1
+        Row = 1
+      end>
+    RowCollection = <
+      item
+        Value = 2.000000000000000000
+      end
+      item
+        Value = 92.824896253612680000
+      end
+      item
+        Value = 5.175103746387323000
+      end>
+    object GridPanelLayout1: TGridPanelLayout
+      Align = Client
+      Size.Width = 346.559997558593800000
+      Size.Height = 438.133514404296900000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ColumnCollection = <
+        item
+          Value = 100.000000000000000000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = GridPanelLayout2
+          Row = 0
+        end
+        item
+          Column = 0
+          Control = GridPanelLayout4
+          Row = 1
+        end
+        item
+          Column = 0
+          Control = GridPanelLayout5
+          Row = 2
+        end>
+      RowCollection = <
+        item
+          Value = 10.000000000000000000
+        end
+        item
+          Value = 41.689860834990060000
+        end
+        item
+          Value = 48.310139165009940000
+        end>
+      object GridPanelLayout2: TGridPanelLayout
+        Align = Client
+        Size.Width = 346.559997558593800000
+        Size.Height = 43.813350677490230000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        ColumnCollection = <
+          item
+            Value = 3.102697045447700000
+          end
+          item
+            Value = 93.897302954552300000
+          end
+          item
+            Value = 3.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 1
+            Control = GridPanelLayout3
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            Value = 2.090253164556962000
+          end
+          item
+            Value = 95.909746835443040000
+          end
+          item
+            Value = 2.000000000000000000
+          end>
+        object GridPanelLayout3: TGridPanelLayout
+          Align = Client
+          Size.Width = 325.410491943359400000
+          Size.Height = 42.021274566650390000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          ColumnCollection = <
+            item
+              Value = 12.519309404815990000
+            end
+            item
+              Value = 45.000000000000000000
+            end
+            item
+              Value = 42.480690595184010000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = GridPanelLayout6
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = LabelOtoKonum
+              Row = 0
+            end
+            item
+              Column = 2
+              Control = ComboBox1
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 100.000000000000000000
+            end>
+          object GridPanelLayout6: TGridPanelLayout
+            Align = Client
+            Size.Width = 40.739147186279300000
+            Size.Height = 42.021274566650390000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            ColumnCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 0
+                Control = Switch1
+                Row = 0
+              end>
+            RowCollection = <
+              item
+                Value = 100.000000000000000000
+              end>
+            object Switch1: TSwitch
+              Align = Client
+              IsChecked = False
+              Size.Width = 44.000000000000000000
+              Size.Height = 26.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              OnSwitch = Switch1Switch
+            end
+          end
+          object LabelOtoKonum: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 146.434722900390600000
+            Size.Height = 42.021274566650390000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Oto. Konum: Kapal'#305
+            TabOrder = 8
+          end
+          object ComboBox1: TComboBox
+            Align = Client
+            Items.Strings = (
+              'Adana'
+              'Ad'#305'yaman'
+              'Afyonkarahisar'
+              'A'#287'r'#305
+              'Aksaray'
+              'Amasya'
+              'Ankara'
+              'Antalya'
+              'Ardahan'
+              'Artvin'
+              'Ayd'#305'n'
+              'Bal'#305'kesir'
+              'Bart'#305'n'
+              'Batman'
+              'Bayburt'
+              'Bilecik'
+              'Bing'#246'l'
+              'Bitlis'
+              'Bolu'
+              'Burdur'
+              'Bursa'
+              #199'anakkale'
+              #199'ank'#305'r'#305
+              #199'orum'
+              'Denizli'
+              'Diyarbak'#305'r'
+              'D'#252'zce'
+              'Edirne'
+              'Elaz'#305#287
+              'Erzincan'
+              'Erzurum'
+              'Eski'#351'ehir'
+              'Gaziantep'
+              'Giresun'
+              'G'#252'm'#252#351'hane'
+              'Hakk'#226'ri'
+              'Hatay'
+              'I'#287'd'#305'r'
+              'Isparta'
+              #304'stanbul'
+              #304'zmir'
+              'Kahramanmara'#351
+              'Karab'#252'k'
+              'Karaman'
+              'Kars'
+              'Kastamonu'
+              'Kayseri'
+              'Kilis'
+              'K'#305'r'#305'kkale'
+              'K'#305'rklareli'
+              'K'#305'r'#351'ehir'
+              'Kocaeli'
+              'Konya'
+              'K'#252'tahya'
+              'Malatya'
+              'Manisa'
+              'Mardin'
+              'Mersin'
+              'Mu'#287'la'
+              'Mu'#351
+              'Nev'#351'ehir'
+              'Ni'#287'de'
+              'Ordu'
+              'Osmaniye'
+              'Rize'
+              'Sakarya'
+              'Samsun'
+              #350'anl'#305'urfa'
+              'Siirt'
+              'Sinop'
+              'Sivas'
+              #350#305'rnak'
+              'Tekirda'#287
+              'Tokat'
+              'Trabzon'
+              'Tunceli'
+              'U'#351'ak'
+              'Van'
+              'Yalova'
+              'Yozgat'
+              'Zonguldak')
+            ItemIndex = 0
+            Size.Width = 138.236648559570300000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 9
+            OnChange = ComboBox1Change
+          end
+        end
+      end
+      object GridPanelLayout4: TGridPanelLayout
+        Align = Client
+        Size.Width = 346.559997558593800000
+        Size.Height = 182.657257080078100000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ColumnCollection = <
+          item
+            Value = 100.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = GridPanelLayout7
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            Value = 9.100000000000000000
+          end
+          item
+            Value = 81.900000000000010000
+          end
+          item
+            Value = 9.000000000000000000
+          end>
+        object GridPanelLayout7: TGridPanelLayout
+          Align = Client
+          Size.Width = 346.559997558593800000
+          Size.Height = 149.596298217773400000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          ColumnCollection = <
+            item
+              Value = 55.630007283321190000
+            end
+            item
+              Value = 40.000000000000000000
+            end
+            item
+              Value = 4.369992716678805000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = GridPanelLayout8
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = GridPanelLayout9
+              Row = 0
+            end>
+          RowCollection = <
+            item
+              Value = 100.000000000000000000
+            end>
+          object GridPanelLayout8: TGridPanelLayout
+            Align = Client
+            Size.Width = 192.791351318359400000
+            Size.Height = 149.596298217773400000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            ColumnCollection = <
+              item
+                Value = 15.000000000000000000
+              end
+              item
+                Value = 85.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = -1
+                Row = 0
+              end
+              item
+                Column = 1
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = Image5
+                Row = 1
+              end>
+            RowCollection = <
+              item
+                Value = 11.112792030563700000
+              end
+              item
+                Value = 78.887207969436300000
+              end
+              item
+                Value = 10.000000000000000000
+              end>
+            object TLabel
+              Align = Center
+              Size.Width = 22.000000000000000000
+              Size.Height = 9.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.HorzAlign = Center
+              TabOrder = 5
+            end
+            object TLabel
+              Align = Center
+              Size.Width = 22.000000000000000000
+              Size.Height = 9.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.HorzAlign = Center
+              TabOrder = 4
+            end
+            object Image5: TImage
+              MultiResBitmap = <
+                item
+                end>
+              Align = Client
+              Size.Width = 163.872650146484400000
+              Size.Height = 118.012344360351600000
+              Size.PlatformDefault = False
+            end
+          end
+          object GridPanelLayout9: TGridPanelLayout
+            Align = Client
+            Size.Width = 138.623992919921900000
+            Size.Height = 149.596298217773400000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            ColumnCollection = <
+              item
+                Value = 10.000000000000000000
+              end
+              item
+                Value = 90.000000000000000000
+              end>
+            ControlCollection = <
+              item
+                Column = 1
+                Control = LabelDerece
+                Row = 0
+              end
+              item
+                Column = 1
+                Control = LabelHissedilen
+                Row = 1
+              end
+              item
+                Column = 1
+                Control = LabelAciklama
+                Row = 2
+              end>
+            RowCollection = <
+              item
+                Value = 59.538461538461540000
+              end
+              item
+                Value = 14.000000000000000000
+              end
+              item
+                Value = 26.461538461538460000
+              end>
+            object LabelDerece: TLabel
+              Align = Client
+              StyledSettings = [Family, Style]
+              Size.Width = 124.761596679687500000
+              Size.Height = 89.067337036132810000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 34.000000000000000000
+              Text = '0 '#176'C'
+              TabOrder = 10
+            end
+            object LabelHissedilen: TLabel
+              Align = Client
+              StyledSettings = [Family, Style]
+              Size.Width = 124.761596679687500000
+              Size.Height = 20.943481445312500000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 14.000000000000000000
+              Text = 'Hissedilen: 0 '#176'C'
+              TabOrder = 9
+            end
+            object LabelAciklama: TLabel
+              Align = Client
+              StyledSettings = [Family, Style]
+              Size.Width = 124.761596679687500000
+              Size.Height = 39.585479736328130000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 14.000000000000000000
+              Text = '-'
+              TabOrder = 8
+            end
+          end
+        end
+      end
+      object GridPanelLayout5: TGridPanelLayout
+        Align = Client
+        Size.Width = 346.559997558593800000
+        Size.Height = 211.662933349609400000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        ColumnCollection = <
+          item
+            Value = 9.000000000000000000
+          end
+          item
+            Value = 81.000000000000000000
+          end
+          item
+            Value = 10.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 1
+            Control = GridPanelLayout10
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            Value = 9.000000000000000000
+          end
+          item
+            Value = 81.000000000000000000
+          end
+          item
+            Value = 10.000000000000000000
+          end>
+        object GridPanelLayout10: TGridPanelLayout
+          Align = Client
+          Size.Width = 280.713592529296900000
+          Size.Height = 171.446975708007800000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          ColumnCollection = <
+            item
+              Value = 19.071105985896220000
+            end
+            item
+              Value = 35.000000000000000000
+            end
+            item
+              Value = 45.928894014103780000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = Image1
+              Row = 0
+            end
+            item
+              Column = 1
+              Control = BaslikRuzgar
+              Row = 0
+            end
+            item
+              Column = 2
+              Control = LabelRuzgar
+              Row = 0
+            end
+            item
+              Column = 0
+              Control = Image2
+              Row = 1
+            end
+            item
+              Column = 1
+              Control = BaslikBasinc
+              Row = 1
+            end
+            item
+              Column = 2
+              Control = LabelBasinc
+              Row = 1
+            end
+            item
+              Column = 0
+              Control = Image3
+              Row = 2
+            end
+            item
+              Column = 1
+              Control = BaslikNem
+              Row = 2
+            end
+            item
+              Column = 2
+              Control = LabelNem
+              Row = 2
+            end
+            item
+              Column = 0
+              Control = Image4
+              Row = 3
+            end
+            item
+              Column = 1
+              Control = BaslikSaat
+              Row = 3
+            end
+            item
+              Column = 2
+              Control = LabelGuncSaat
+              Row = 3
+            end>
+          RowCollection = <
+            item
+              Value = 23.297574626865670000
+            end
+            item
+              Value = 25.396455223880600000
+            end
+            item
+              Value = 26.305970149253730000
+            end
+            item
+              Value = 25.000000000000000000
+            end>
+          object Image1: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Align = Center
+            Size.Width = 33.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object BaslikRuzgar: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 98.249755859375000000
+            Size.Height = 39.942985534667970000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = 'R'#252'zgar H'#305'z'#305':'
+            TabOrder = 9
+          end
+          object LabelRuzgar: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 128.928649902343800000
+            Size.Height = 39.942985534667970000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = '0 KM/H'
+            TabOrder = 2
+          end
+          object Image2: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Align = Center
+            Size.Width = 33.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object BaslikBasinc: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 98.249755859375000000
+            Size.Height = 43.541450500488280000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = 'Hava Bas'#305'nc'#305':'
+            TabOrder = 8
+          end
+          object LabelBasinc: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 128.928649902343800000
+            Size.Height = 43.541450500488280000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = '0 hPa'
+            TabOrder = 3
+          end
+          object Image3: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Anchors = []
+            Position.X = 10.267593383789060000
+            Position.Y = 91.034835815429690000
+            Size.Width = 33.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object BaslikNem: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 98.249755859375000000
+            Size.Height = 45.100799560546880000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = 'Nem Oran'#305':'
+            TabOrder = 7
+          end
+          object LabelNem: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 128.928649902343800000
+            Size.Height = 45.100799560546880000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = '%0'
+            TabOrder = 4
+          end
+          object Image4: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Anchors = []
+            Position.X = 10.267593383789060000
+            Position.Y = 135.016113281250000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object BaslikSaat: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 98.249755859375000000
+            Size.Height = 42.861755371093750000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = 'Veri Saati:'
+            TabOrder = 6
+          end
+          object LabelGuncSaat: TLabel
+            Align = Client
+            StyledSettings = [Family, Style]
+            Size.Width = 128.928649902343800000
+            Size.Height = 42.861755371093750000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            Text = '10:00'
+            TabOrder = 5
+          end
+        end
+      end
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 289
+    Top = 334
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 520.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object SpeedButton1: TSpeedButton
+      Align = Center
+      Size.Width = 210.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Saatlik Hava Durumunu G'#246'r'
+      OnClick = SpeedButton1Click
+    end
+  end
+  object LocationSensor1: TLocationSensor
+    ActivityType = Other
+    UsageAuthorization = WhenInUse
+    Left = 321
+    Top = 382
+  end
+end
+

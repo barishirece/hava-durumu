@@ -1,0 +1,1289 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup>
+        <DeviceId Condition="'$(Platform)'=='Android'">127.0.0.1:58526</DeviceId>
+        <DeviceId Condition="'$(Platform)'=='Android64'">127.0.0.1:58526</DeviceId>
+    </PropertyGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="Win32\Debug\HavaDurumu.exe" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\</RemoteDir>
+            <RemoteName>HavaDurumu.exe</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android64'">
+        <DeployFile Include="img\owm-icons\04d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\04d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\HavaDurumu.classes" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\classes\</RemoteDir>
+            <RemoteName>HavaDurumu.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\mips\</RemoteDir>
+            <RemoteName>libHavaDurumu.so</RemoteName>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi-v7a\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libHavaDurumu.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiv7aFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\48x48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\styles.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\36x36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\libHavaDurumu.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libHavaDurumu.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="img\splash\426x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\splash\960x720.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\96x96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\basinc.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>basinc.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\basinc.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>basinc.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\04n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\04n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\</RemoteDir>
+            <RemoteName>AndroidManifest.xml</RemoteName>
+            <DeployClass>ProjectAndroidManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\nem.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>nem.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\nem.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>nem.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\72x72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libHavaDurumu.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\colors.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_Colors</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\splash_image_def.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable\</RemoteDir>
+            <RemoteName>splash_image_def.xml</RemoteName>
+            <DeployClass>AndroidSplashImageDef</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\144x144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\splash\640x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\splash\470x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon24</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\saat.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>saat.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\saat.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>saat.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\192x192.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon192</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\strings.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values\</RemoteDir>
+            <RemoteName>strings.xml</RemoteName>
+            <DeployClass>Android_Strings</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android64\Debug\styles-v21.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\ruzgar.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>ruzgar.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\ruzgar.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>ruzgar.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android'">
+        <DeployFile Include="img\app-icons\72x72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\strings.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values\</RemoteDir>
+            <RemoteName>strings.xml</RemoteName>
+            <DeployClass>Android_Strings</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\colors.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values\</RemoteDir>
+            <RemoteName>colors.xml</RemoteName>
+            <DeployClass>Android_Colors</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\splash_image_def.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable\</RemoteDir>
+            <RemoteName>splash_image_def.xml</RemoteName>
+            <DeployClass>AndroidSplashImageDef</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\splash\470x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-normal\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage470</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\saat.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>saat.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\saat.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>saat.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\basinc.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>basinc.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\basinc.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>basinc.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\96x96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\libHavaDurumu.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libHavaDurumu.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\03n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>03n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\04d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\styles-v21.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values-v21\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStylesV21</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\04d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\armeabi\</RemoteDir>
+            <RemoteName>libHavaDurumu.so</RemoteName>
+            <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\144x144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon144</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\splash\426x320.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-small\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage426</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\50d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>50d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\HavaDurumu.classes" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\classes\</RemoteDir>
+            <RemoteName>HavaDurumu.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon96</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(NDKBasePath)\prebuilt\android-arm\gdbserver\gdbserver" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>gdbserver</RemoteName>
+            <DeployClass>AndroidGDBServer</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon72</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\02d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>02d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\48x48.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon48</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\04n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\04n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>04n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\</RemoteDir>
+            <RemoteName>AndroidManifest.xml</RemoteName>
+            <DeployClass>ProjectAndroidManifest</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\11d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>11d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\13n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>13n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="Android\Debug\styles.xml" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\values\</RemoteDir>
+            <RemoteName>styles.xml</RemoteName>
+            <DeployClass>AndroidSplashStyles</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\ruzgar.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>ruzgar.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\ruzgar.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>ruzgar.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\splash\640x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-large\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage640</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\01n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>01n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\splash\960x720.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xlarge\</RemoteDir>
+            <RemoteName>splash_image.png</RemoteName>
+            <DeployClass>Android_SplashImage960</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\36x36.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-ldpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon36</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-mdpi\</RemoteDir>
+            <RemoteName>ic_notification.png</RemoteName>
+            <DeployClass>Android_NotificationIcon24</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\library\lib\mips\</RemoteDir>
+            <RemoteName>libHavaDurumu.so</RemoteName>
+            <DeployClass>AndroidLibnativeMipsFile</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09d.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\09d.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>09d.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10n.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\owm-icons\10n.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\owmikon\</RemoteDir>
+            <RemoteName>10n.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\app-icons\192x192.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon192</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\nem.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>nem.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="img\nem.png" Condition="'$(Config)'=='Release'">
+            <RemoteDir>HavaDurumu\assets\internal\ikonlar\</RemoteDir>
+            <RemoteName>nem.png</RemoteName>
+            <DeployClass>File</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+</Project>

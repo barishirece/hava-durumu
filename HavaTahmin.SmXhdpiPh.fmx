@@ -1,0 +1,109 @@
+inherited Form2_SmXhdpiPh: TForm2_SmXhdpiPh
+  ClientHeight = 376
+  ClientWidth = 248
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 248.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 248.000000000000000000
+      inherited GridPanelLayout3: TGridPanelLayout
+        Size.Width = 248.000000000000000000
+      end
+    end
+  end
+  inherited GridPanelLayout1: TGridPanelLayout
+    Size.Width = 248.000000000000000000
+    Size.Height = 328.000000000000000000
+    inherited GridPanelLayout2: TGridPanelLayout
+      Size.Width = 202.459152221679700000
+      Size.Height = 295.377563476562500000
+      inherited Image2: TImage
+        Position.Y = 50.997089385986330000
+      end
+      inherited Image3: TImage
+        Position.Y = 101.924148559570300000
+      end
+      inherited Image4: TImage
+        Position.Y = 153.034194946289100000
+      end
+      inherited Image5: TImage
+        Position.Y = 204.454559326171900000
+      end
+      inherited TahminSaat1: TLabel
+        Size.Width = 38.495250701904300000
+        Size.Height = 41.978271484375000000
+      end
+      inherited TahminDerece1: TLabel
+        Size.Width = 50.614791870117190000
+        Size.Height = 41.978271484375000000
+      end
+      inherited TahminAciklama1: TLabel
+        Size.Width = 80.098373413085940000
+        Size.Height = 41.978271484375000000
+      end
+      inherited TahminSaat2: TLabel
+        Size.Width = 38.495250701904300000
+        Size.Height = 42.089229583740230000
+      end
+      inherited TahminDerece2: TLabel
+        Size.Width = 50.614791870117190000
+        Size.Height = 42.089229583740230000
+      end
+      inherited TahminAciklama2: TLabel
+        Size.Width = 80.098373413085940000
+        Size.Height = 42.089229583740230000
+      end
+      inherited TahminSaat3: TLabel
+        Size.Width = 38.495250701904300000
+        Size.Height = 42.409973144531250000
+      end
+      inherited TahminDerece3: TLabel
+        Size.Width = 50.614791870117190000
+        Size.Height = 42.409973144531250000
+      end
+      inherited TahminAciklama3: TLabel
+        Size.Width = 80.098373413085940000
+        Size.Height = 42.409973144531250000
+      end
+      inherited TahminDerece4: TLabel
+        Size.Width = 50.614791870117190000
+        Size.Height = 42.824874877929690000
+      end
+      inherited TahminAciklama4: TLabel
+        Size.Width = 80.098373413085940000
+        Size.Height = 42.824874877929690000
+      end
+      inherited TahminSaat4: TLabel
+        Size.Width = 38.495250701904300000
+        Size.Height = 42.824874877929690000
+      end
+      inherited TahminSaat5: TLabel
+        Size.Width = 38.495250701904300000
+        Size.Height = 42.001800537109380000
+      end
+      inherited TahminAciklama5: TLabel
+        Size.Width = 80.098373413085940000
+        Size.Height = 42.001800537109380000
+      end
+      inherited TahminDerece5: TLabel
+        Size.Width = 50.614791870117190000
+        Size.Height = 42.001800537109380000
+      end
+      inherited Image6: TImage
+        Position.Y = 255.317687988281300000
+      end
+      inherited TahminSaat6: TLabel
+        Size.Width = 38.495250701904300000
+        Size.Height = 40.059875488281250000
+      end
+      inherited TahminDerece6: TLabel
+        Size.Width = 50.614791870117190000
+        Size.Height = 40.059875488281250000
+      end
+      inherited TahminAciklama6: TLabel
+        Size.Width = 80.098373413085940000
+        Size.Height = 40.059875488281250000
+      end
+    end
+  end
+end
